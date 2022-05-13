@@ -13,7 +13,14 @@ class TrainController extends Controller
             ["giorno_partenza", '=', date('Y-m-d')],
             ["cancellato", "=", 0]
         ])->get();
-        $data = ["trains" => $trains];
+        $data = ["trains" => $trains, "title" => "Treni che partono oggi"];
+        return view('trains', $data);
+    }
+
+    public function all()
+    {
+        $trains = Train::all();
+        $data = ["trains" => $trains, "title" => "Tutti i treni"];
         return view('trains', $data);
     }
 }

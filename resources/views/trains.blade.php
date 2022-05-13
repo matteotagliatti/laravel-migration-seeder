@@ -10,7 +10,11 @@
 </head>
 
 <body>
-    <h1>Treni che partono oggi:</h1>
+    <h1>{{ $title }}</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/all">Tutti i treni</a>
+    </nav>
     <div class="grid">
         @foreach ($trains as $train)
             <div class="train">

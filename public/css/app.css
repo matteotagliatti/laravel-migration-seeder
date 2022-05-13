@@ -9,3 +9,9 @@
   padding: 2rem;
 }
 
+nav {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
