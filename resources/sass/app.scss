@@ -1,1 +1,10 @@
-//
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.train {
+    background-color: rgb(201, 201, 201);
+    padding: 2rem;
+}
