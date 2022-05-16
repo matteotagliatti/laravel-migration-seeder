@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'TrainController@index');
 Route::get('/all', 'TrainController@all');
+Route::get('/{id}', 'TrainController@show');

@@ -2,22 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel Migration Seeder - {{ $title }}</title>
-    <link rel="stylesheet" href="/css/app.css">
+    @include('partials.head')
 </head>
 
 <body>
     <h1>{{ $title }}</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/all">Tutti i treni</a>
-    </nav>
+    @include('partials.nav')
     <div class="grid">
         @foreach ($trains as $train)
-            <div class="train">
+            <a href="{{ $train->id }}" class="train">
                 <p>{{ $train->id }}</p>
                 <p>{{ $train->azienda }}</p>
                 <p>Stazione partenza: {{ $train->stazione_partenza }}</p>
@@ -28,7 +21,7 @@
                 <p>Orario di arrivo: {{ $train->orario_arrivo }}</p>
                 <p>Cod treno: {{ $train->codice_treno }}</p>
                 <p>Numero carrozze: {{ $train->numero_carrozze }}</p>
-            </div>
+            </a>
         @endforeach
     </div>
     <div class="pagination">
