@@ -31,6 +31,11 @@
             </div>
         @endforeach
     </div>
+    <div class="pagination">
+        @if (count($trains) >= 10)
+            {{ $trains->links() }}
+        @endif
+    </div>
 </body>
 
 </html>

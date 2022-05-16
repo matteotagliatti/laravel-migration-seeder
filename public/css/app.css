@@ -15,3 +15,15 @@ nav {
   margin-bottom: 2rem;
 }
 
+.pagination nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.pagination nav ul li {
+  list-style-type: none;
+  font-size: 2rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
+

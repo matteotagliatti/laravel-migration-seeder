@@ -19,7 +19,7 @@ class TrainController extends Controller
 
     public function all()
     {
-        $trains = Train::all();
+        $trains = Train::orderBy("giorno_partenza", "desc")->paginate(10);;
         $data = ["trains" => $trains, "title" => "Tutti i treni"];
         return view('trains', $data);
     }
